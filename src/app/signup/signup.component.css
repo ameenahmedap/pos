@@ -1,2 +1,5 @@
 a{color: white;}
 a:hover{text-decoration: none;}
+@media screen and (max-width: 768px){.col-md-8{padding: 20px 0px;}}
+h2{margin-top: 220px;}
+@media screen and (max-width: 768px){h2{margin-top: 0px;}}
