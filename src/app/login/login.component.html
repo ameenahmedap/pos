@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="row cardbox">
+        <div class="col-md-4" style="background: url('./../../assets/bg.jpg');background-size: cover;">
+          <h4 style="color: white;">Kadbyte</h4>
+          <p style="color: white;">Manage your accounts using Kadbyte</p>
+          <div style="text-align: center;">
+            <button class="btn btn-success">
+              <a routerLink="/signup">Sign Up</a>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-8" [formGroup]="loginForm" style="text-align: center;padding: 100px 20px;">
+          <h1 style="color: green;">Welcome Back</h1>
+          <mat-form-field appearance="outline" style="width: 70%;">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Enter your email" formControlName="userName">
+          </mat-form-field>
+          <mat-form-field appearance="outline" style="width: 70%;">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Enter your password" formControlName="password"
+              autocomplete="new-password">
+          </mat-form-field>
+          <div>
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+            <a style="color: gray;" mat-flat-button routerLink=".">Forgot password ?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
