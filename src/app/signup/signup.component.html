@@ -1,47 +1,49 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-      <div class="row cardbox">
-        <div class="col-md-4" style="background: url('./../../assets/bg.jpg');background-size: cover;">
-          <h2 style="color: white;">Manage</h2>
-          <p style="color: white;">With KadByte manage your business from anywhere at any time</p>
-          <div style="text-align: center;">
-            <button class="btn btn-success">
-              <a routerLink="/login">Sign In</a>
-            </button>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row cardbox">
+          <div class="col-md-4" style="background: url('./../../assets/bg.jpg');background-size: cover;">
+            <h2 style="color: white;">Manage</h2>
+            <p style="color: white;">With KadByte manage your business from anywhere at any time</p>
+            <div style="text-align: center;">
+              <button class="btn btn-success">
+                <a routerLink="/login">Sign In</a>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="col-md-8" [formGroup]="signUpForm" style="text-align: center;">
-          <h1 style="color: green;">Sign Up</h1>
-          <mat-form-field appearance="outline" style="width: 70%;">
-            <mat-label>Name</mat-label>
-            <input matInput placeholder="Enter your name" formControlName="userName">
-          </mat-form-field>
-          <mat-form-field appearance="outline" style="width: 70%;">
-            <mat-label>Mobile</mat-label>
-            <input matInput placeholder="Enter your mobile number" formControlName="mobile">
-          </mat-form-field>
-          <mat-form-field appearance="outline" style="width: 70%;">
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Enter your email" formControlName="email">
-          </mat-form-field>
-          <mat-form-field appearance="outline" style="width: 70%;">
-            <mat-label>Password</mat-label>
-            <input type="password" matInput placeholder="Enter your password" formControlName="password"
-              autocomplete="new-password">
-          </mat-form-field>
-          <mat-form-field appearance="outline" style="width: 70%;">
-            <mat-label>Confirm Password</mat-label>
-            <input type="password" matInput placeholder="Retype your password" formControlName="confirmPassword"
-              autocomplete="new-password">
-          </mat-form-field>
-          <div>
-            <button mat-raised-button color="primary" (click)="signup()">Sign Up</button>
+          <div class="col-md-8" [formGroup]="signUpForm" style="text-align: center;">
+            <h1 style="color: green;">Sign Up</h1>
+            <mat-form-field appearance="outline" style="width: 70%;">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Enter your name" formControlName="userName">
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 70%;">
+              <mat-label>Mobile</mat-label>
+              <input matInput placeholder="Enter your mobile number" formControlName="mobile">
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 70%;">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Enter your email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 70%;">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Enter your password" formControlName="password"
+                autocomplete="new-password">
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 70%;">
+              <mat-label>Confirm Password</mat-label>
+              <input type="password" matInput placeholder="Retype your password" formControlName="confirmPassword"
+                autocomplete="new-password">
+            </mat-form-field>
+            <div>
+              <button mat-raised-button color="primary" (click)="signup()">Sign Up</button>
+            </div>
           </div>
         </div>
       </div>
+      <div class="col-md-1"></div>
     </div>
-    <div class="col-md-1"></div>
   </div>
-</div>
+</body>

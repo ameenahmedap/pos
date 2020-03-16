@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +11,7 @@ export class SignupComponent implements OnInit {
 
   signUpForm;userName;mobile;email;password;confirmPassword;
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
     this.signUpForm = new FormGroup({
@@ -30,6 +31,14 @@ export class SignupComponent implements OnInit {
   signup(){
     this.getValues();
     console.log(this.userName,this.mobile,this.email,this.password);
+    let data = {
+      "username": this.userName,
+	    "password": this.password,
+	    "email": this.email,
+	    "phone": this.mobile
+    };
+    this.api.signUp(data).subscribe(data=>{if(data==true){alert("Registration Successfull");}},
+    error=>{console.log(error);});
   }
 
 }
