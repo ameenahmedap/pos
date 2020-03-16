@@ -1,4 +1,4 @@
-<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+<!-- <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="example-toolbar">
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
     <h1 class="example-app-name">Responsive App</h1>
@@ -21,4 +21,16 @@
       <p>{{navContent}}</p>
     </mat-sidenav-content>
   </mat-sidenav-container>
-</div>
+</div> -->
+  <div class="sidenav">
+    <mat-list>
+      <mat-list-item><mat-icon mat-list-icon>storefront</mat-icon></mat-list-item>
+    </mat-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard">Dashboard</a>
+      <a mat-list-item routerLink="/sales">Sales</a>
+      <a mat-list-item routerLink="/products">Product</a>
+      <button mat-icon-button color="primary"><mat-icon>home</mat-icon>
+      </button>
+    </mat-nav-list>
+  </div>
