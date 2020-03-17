@@ -24,13 +24,18 @@
 </div> -->
   <div class="sidenav">
     <mat-list>
-      <mat-list-item><mat-icon mat-list-icon>storefront</mat-icon></mat-list-item>
+      <mat-list-item style="display: flex;justify-content: center;">
+        <div class="mat-list-item-content" style="border-bottom: 1px solid gray;">
+          <mat-icon mat-list-icon>storefront</mat-icon>
+        </div>
+      </mat-list-item>
     </mat-list>
-    <mat-nav-list>
+    <mat-nav-list style="display: flex;flex-direction: column;justify-content: center;">
       <a mat-list-item routerLink="/dashboard">Dashboard</a>
       <a mat-list-item routerLink="/sales">Sales</a>
       <a mat-list-item routerLink="/products">Product</a>
-      <button mat-icon-button color="primary"><mat-icon>home</mat-icon>
-      </button>
+      <button mat-icon-button color="primary"><mat-icon>home</mat-icon></button>
+      <button mat-icon-button color="primary"><mat-icon>show_chart</mat-icon></button>
+      <button mat-icon-button color="primary"><mat-icon>list</mat-icon></button>
     </mat-nav-list>
   </div>
